@@ -18,7 +18,7 @@ syn keyword quarkKeyword   import module fn in if elif else while ret
 syn keyword quarkKeyword   extern var struct impl data extend this
 syn keyword quarkKeyword   match break continue for
 
-syn keyword quarkType      bool int str float double char void
+syn keyword quarkType      bool int str float double char void map list
 syn keyword quarkBoolean   true false null
 
 syn match   quarkVariable  '\h\w*'
@@ -36,6 +36,7 @@ endif
 syn match  quarkNumber '\d\+\(\.\d\+\)\?'
 syn match  quarkNumber '\d\+\(\.\d\+\)\?[fF]\?'
 syn match  quarkNumber '0[xX]\(\x\+\)'
+
 syn region quarkString start=+"+ end=+"+ contains=quarkEscape,@Spell
 syn region quarkString start=+'+ end=+'+ contains=quarkEscape,@Spell
 syn match  quarkEscape +\\[ntrbfav\\"'0]+ contained
